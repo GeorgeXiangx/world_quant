@@ -1,0 +1,17 @@
+label,sharpe,fitness,turnover,returns,checks,link,expression,alpha_id
+基础OEY,1.25,0.91,0.0736,0.0656,6/8,https://platform.worldquantbrain.com/alpha/E5gZjxZG,"ts_rank(operating_income/cap, 252)",E5gZjxZG
+OEY-126天,1.27,0.85,0.093,0.0566,6/8,https://platform.worldquantbrain.com/alpha/ZY2R8VPY,"ts_rank(operating_income/cap, 126)",ZY2R8VPY
+OEY-500天,1.09,0.76,0.0611,0.0614,5/8,https://platform.worldquantbrain.com/alpha/mLrPvOdE,"ts_rank(operating_income/cap, 500)",mLrPvOdE
+OI/assets,0.86,0.45,0.0426,0.0344,5/8,https://platform.worldquantbrain.com/alpha/wpn8rnnQ,"ts_rank(operating_income/assets, 252)",wpn8rnnQ
+OI/revenue,0.36,0.12,0.0406,0.0128,5/8,https://platform.worldquantbrain.com/alpha/2ra1Y7jJ,"ts_rank(operating_income/revenue, 252)",2ra1Y7jJ
+OI/equity,1.29,0.79,0.0421,0.0471,6/8,https://platform.worldquantbrain.com/alpha/0mebJRNq,"ts_rank(operating_income/equity, 252)",0mebJRNq
+group_zscore_OEY,1.32,0.94,0.0746,0.063,6/8,https://platform.worldquantbrain.com/alpha/E5gZdPxL,"group_zscore(ts_rank(operating_income/cap, 252), subindustry)",E5gZdPxL
+group_rank_OEY,1.7,1.32,0.0887,0.0756,7/8,https://platform.worldquantbrain.com/alpha/A1gRoR2d,"group_rank(ts_rank(operating_income/cap, 252), subindustry)",A1gRoR2d
+ts_zscore_OEY,1.14,0.84,0.0712,0.0677,5/8,https://platform.worldquantbrain.com/alpha/0meb1vAK,"ts_zscore(operating_income/cap, 252)",0meb1vAK
+OEY-INDUSTRY,1.18,0.87,0.068,0.0685,5/8,https://platform.worldquantbrain.com/alpha/mLrPEVPE,"ts_rank(operating_income/cap, 252)",mLrPEVPE
+OEY-MARKET,0.9,0.72,0.0629,0.079,5/8,https://platform.worldquantbrain.com/alpha/LLgP0wNv,"ts_rank(operating_income/cap, 252)",LLgP0wNv
+OEY-decay=0,1.42,1.06,0.1309,0.073,7/8,https://platform.worldquantbrain.com/alpha/d5E52kAY,"ts_rank(operating_income/cap, 252)",d5E52kAY
+OEY-decay=10,1.23,0.89,0.0577,0.065,5/8,https://platform.worldquantbrain.com/alpha/Vk2kvg3b,"ts_rank(operating_income/cap, 252)",Vk2kvg3b
+OEY-trunc=0.08,1.25,0.91,0.0736,0.0656,6/8,https://platform.worldquantbrain.com/alpha/Xg2gjaMa,"ts_rank(operating_income/cap, 252)",Xg2gjaMa
+OEY+动量,1.87,1.25,0.2406,0.1071,7/8,https://platform.worldquantbrain.com/alpha/9qaqz5k2,"ts_rank(operating_income/cap, 252) * rank(-ts_delta(close, 5))",9qaqz5k2
+OEY+低波动,0.31,0.15,0.081,0.0311,5/8,https://platform.worldquantbrain.com/alpha/WjajjKrP,"ts_rank(operating_income/cap, 252) * rank(-ts_std_dev(returns, 22))",WjajjKrP

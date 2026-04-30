@@ -1,0 +1,9 @@
+label,alpha_id,sharpe,fitness,turnover,returns,drawdown,margin,checks_passed,checks_pending,checks_total,submittable,decay,neutralization,truncation,universe,link,expression
+Alpha#1,QP2JPjlQ,1.59,0.7,0.5168,0.1003,0.0618,0.000388,6,1,9,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/QP2JPjlQ,"(rank(ts_arg_max(signed_power(((returns < 0) ? ts_std_dev(returns, 20) : close), 2), 5)) - 0.5)"
+Alpha#2,om3pmKwJ,0.5,0.11,0.3238,0.0143,0.0499,8.8e-05,4,1,9,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/om3pmKwJ,"(-1 * ts_corr(rank(ts_delta(log(volume), 2)), rank(((close - open) / open)), 6))"
+Alpha#3,0melmrE8,0.36,0.07,0.2859,0.0116,0.05,8.1e-05,4,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/0melmrE8,"(-1 * ts_corr(rank(open), rank(volume), 10))"
+Alpha#4,YP2rLjqM,1.13,0.63,0.3404,0.1066,0.0892,0.000627,5,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/YP2rLjqM,"(-1 * ts_rank(rank(low), 9))"
+Alpha#5,N1gwxngp,1.42,0.75,0.3944,0.1107,0.0625,0.000561,6,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/N1gwxngp,"(rank((open - (ts_sum(vwap, 10) / 10))) * (-1 * abs(rank((close - vwap)))))"
+Alpha#6,88ao5eN7,0.84,0.31,0.2866,0.0387,0.067,0.00027,4,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/88ao5eN7,"(-1 * ts_corr(open, volume, 10))"
+Alpha#7,vReqw1ja,1.3,0.56,0.4359,0.0799,0.0484,0.000367,6,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/vReqw1ja,"((ts_mean(volume, 20) < volume) ? ((-1 * ts_rank(abs(ts_delta(close, 7)), 60)) * sign(ts_delta(close, 7))) : (-1 * 1))"
+Alpha#8,qMP19V2V,1.23,0.56,0.3568,0.0746,0.0544,0.000418,5,1,8,False,6,SUBINDUSTRY,0.08,TOP3000,https://platform.worldquantbrain.com/alpha/qMP19V2V,"(-1 * rank(((ts_sum(open, 5) * ts_sum(returns, 5)) - ts_delay((ts_sum(open, 5) * ts_sum(returns, 5)), 10))))"

@@ -1,0 +1,63 @@
+2026-04-28 15:57:25 [INFO] [MainThread] 日志文件: log/backtest_sentiment_news_20260428_155725.log
+2026-04-28 15:57:26 [INFO] [MainThread] ======================================================================
+2026-04-28 15:57:26 [INFO] [MainThread] 回测任务: sentiment_news, 共 15 个变体, 并发数=5
+2026-04-28 15:57:26 [INFO] [MainThread] ======================================================================
+2026-04-28 15:57:26 [INFO] [backtest_0] [buzz_ts_rank] 开始回测
+2026-04-28 15:57:26 [INFO] [backtest_0]   表达式: rank(ts_sum(vec_avg(scl12_buzz), 60))
+2026-04-28 15:57:26 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:57:26 [INFO] [backtest_1] [buzz_slope] 开始回测
+2026-04-28 15:57:26 [INFO] [backtest_2] [buzz_av_diff] 开始回测
+2026-04-28 15:57:26 [INFO] [backtest_3] [buzz_zscore] 开始回测
+2026-04-28 15:57:26 [INFO] [backtest_1]   表达式: slope = ts_regression(ts_backfill(vec_avg(scl12_buzz), 20), ts_step(1), 10, rettype=2); rank(slope)
+2026-04-28 15:57:26 [INFO] [backtest_4] [buzz_vol_resid] 开始回测
+2026-04-28 15:57:26 [INFO] [backtest_2]   表达式: rank(ts_av_diff(ts_backfill(vec_avg(scl12_buzz), 20), 60))
+2026-04-28 15:57:26 [INFO] [backtest_3]   表达式: ts_zscore(ts_backfill(vec_avg(scl12_buzz), 20), 120)
+2026-04-28 15:57:26 [INFO] [backtest_1]   设置: decay=3, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:57:26 [INFO] [backtest_4]   表达式: buzz = ts_backfill(vec_avg(scl12_buzz), 20); -ts_regression(buzz, log(volume), 60, rettype=0)
+2026-04-28 15:57:26 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:57:26 [INFO] [backtest_3]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:57:26 [INFO] [backtest_4]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:57:27 [INFO] [backtest_0]   [buzz_ts_rank] 模拟地址: https://api.worldquantbrain.com/simulations/4sbItg9XP4jlczqKDcfO1RX
+2026-04-28 15:57:27 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 15:57:27 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:28 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:28 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:28 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:32 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 15:57:38 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:38 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:38 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:38 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 15:57:38 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:44 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 15:57:48 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:48 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:48 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:48 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:49 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 15:57:55 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:57:58 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:58 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:59 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:57:59 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:00 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:05 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:09 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:09 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:09 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:09 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:11 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:16 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:19 [WARNING] [backtest_2]   [buzz_av_diff] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:19 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:19 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:20 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:21 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:29 [INFO] [backtest_2]   [buzz_av_diff] 模拟地址: https://api.worldquantbrain.com/simulations/2GHAQxfNt4XYcB71dXxUKgyz
+2026-04-28 15:58:29 [WARNING] [backtest_4]   [buzz_vol_resid] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:30 [INFO] [backtest_2]   [buzz_av_diff] 进度 10%
+2026-04-28 15:58:30 [WARNING] [backtest_3]   [buzz_zscore] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:30 [WARNING] [backtest_1]   [buzz_slope] 提交异常: {'detail': 'CONCURRENT_SIMULATION_LIMIT_EXCEEDED'}, 10s 后重试
+2026-04-28 15:58:31 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 15:58:35 [INFO] [backtest_2]   [buzz_av_diff] 进度 10%
+2026-04-28 15:58:36 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%

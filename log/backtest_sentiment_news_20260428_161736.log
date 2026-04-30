@@ -1,0 +1,583 @@
+2026-04-28 16:17:36 [INFO] [MainThread] 日志文件: log/backtest_sentiment_news_20260428_161736.log
+2026-04-28 16:17:37 [INFO] [MainThread] ======================================================================
+2026-04-28 16:17:37 [INFO] [MainThread] 回测任务: sentiment_news, 共 15 个变体, 并发数=3
+2026-04-28 16:17:37 [INFO] [MainThread] ======================================================================
+2026-04-28 16:17:37 [INFO] [backtest_0] [buzz_ts_rank] 开始回测
+2026-04-28 16:17:37 [INFO] [backtest_0]   表达式: rank(ts_sum(vec_avg(scl12_buzz), 60))
+2026-04-28 16:17:37 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:17:37 [INFO] [backtest_1] [buzz_slope] 开始回测
+2026-04-28 16:17:37 [INFO] [backtest_1]   表达式: slope = ts_regression(ts_backfill(vec_avg(scl12_buzz), 20), ts_step(1), 10, rettype=2); rank(slope)
+2026-04-28 16:17:37 [INFO] [backtest_2] [buzz_av_diff] 开始回测
+2026-04-28 16:17:37 [INFO] [backtest_1]   设置: decay=3, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:17:37 [INFO] [backtest_2]   表达式: rank(ts_av_diff(ts_backfill(vec_avg(scl12_buzz), 20), 60))
+2026-04-28 16:17:37 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:17:38 [INFO] [backtest_0]   [buzz_ts_rank] 模拟地址: https://api.worldquantbrain.com/simulations/IYzzhfFO5aUbGw12rPfVWNk
+2026-04-28 16:17:38 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 16:17:39 [INFO] [backtest_1]   [buzz_slope] 模拟地址: https://api.worldquantbrain.com/simulations/13euIy6zq4Db9YBEPAEBRWQ
+2026-04-28 16:17:39 [INFO] [backtest_1]   [buzz_slope] 进度 10%
+2026-04-28 16:17:41 [INFO] [backtest_2]   [buzz_av_diff] 模拟地址: https://api.worldquantbrain.com/simulations/4s2TCddCm56ZccYaN3xSuSE
+2026-04-28 16:17:41 [INFO] [backtest_2]   [buzz_av_diff] 进度 10%
+2026-04-28 16:17:44 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 16:17:45 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:17:46 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:17:49 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 16:17:50 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:17:52 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:17:54 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 16:17:55 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:17:58 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:00 [INFO] [backtest_0]   [buzz_ts_rank] 进度 10%
+2026-04-28 16:18:01 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:18:03 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:05 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 16:18:06 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:18:08 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:10 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 16:18:11 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:18:14 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:16 [INFO] [backtest_0]   [buzz_ts_rank] 进度 15%
+2026-04-28 16:18:17 [INFO] [backtest_1]   [buzz_slope] 进度 15%
+2026-04-28 16:18:19 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:21 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:22 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:24 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:26 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:27 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:30 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:32 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:33 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:35 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:37 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:38 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:40 [INFO] [backtest_2]   [buzz_av_diff] 进度 15%
+2026-04-28 16:18:43 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:43 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:46 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:18:48 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:48 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:52 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:18:53 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:54 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:18:57 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:18:59 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:18:59 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:02 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:04 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:04 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:08 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:09 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:10 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:13 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:15 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:15 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:18 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:20 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:20 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:23 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:26 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:28 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:29 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:31 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:33 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:34 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:37 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:38 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:39 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:42 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:44 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:45 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:47 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:49 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:50 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:53 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:19:54 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:19:56 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:19:58 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:00 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:01 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:03 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:05 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:06 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:09 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:11 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:12 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:14 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:16 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:17 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:19 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:22 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:22 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:25 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:27 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:28 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:30 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:32 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:33 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:35 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:38 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:39 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:41 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:43 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:44 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:46 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:48 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:49 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:51 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:53 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:20:55 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:20:57 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:20:59 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:00 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:02 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:04 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:05 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:07 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:10 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:11 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:12 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:15 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:16 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:18 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:20 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:21 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:23 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:25 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:27 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:29 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:31 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:32 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:34 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:38 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:39 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:40 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:44 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:45 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:45 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:49 [INFO] [backtest_2]   [buzz_av_diff] 进度 35%
+2026-04-28 16:21:50 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:50 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:21:54 [ERROR] [backtest_2]   [buzz_av_diff] 回测失败: unknown
+2026-04-28 16:21:54 [INFO] [backtest_2] [buzz_zscore] 开始回测
+2026-04-28 16:21:54 [INFO] [MainThread] 进度: 1/15 完成
+2026-04-28 16:21:54 [INFO] [backtest_2]   表达式: ts_zscore(ts_backfill(vec_avg(scl12_buzz), 20), 120)
+2026-04-28 16:21:54 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:21:55 [INFO] [backtest_2]   [buzz_zscore] 模拟地址: https://api.worldquantbrain.com/simulations/4FNNNEf9h4ETblmQRTbUWHH
+2026-04-28 16:21:55 [INFO] [backtest_2]   [buzz_zscore] 进度 10%
+2026-04-28 16:21:55 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:21:56 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:00 [INFO] [backtest_2]   [buzz_zscore] 进度 15%
+2026-04-28 16:22:00 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:01 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:06 [INFO] [backtest_2]   [buzz_zscore] 进度 15%
+2026-04-28 16:22:06 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:06 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:11 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:11 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:12 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:16 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:16 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:17 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:22 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:22 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:22 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:27 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:27 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:28 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:32 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:32 [INFO] [backtest_0]   [buzz_ts_rank] 进度 35%
+2026-04-28 16:22:33 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:38 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:38 [ERROR] [backtest_0]   [buzz_ts_rank] 回测失败: unknown
+2026-04-28 16:22:38 [INFO] [backtest_0] [buzz_vol_resid] 开始回测
+2026-04-28 16:22:38 [INFO] [backtest_0]   表达式: buzz = ts_backfill(vec_avg(scl12_buzz), 20); -ts_regression(buzz, log(volume), 60, rettype=0)
+2026-04-28 16:22:38 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:22:38 [INFO] [MainThread] 进度: 2/15 完成
+2026-04-28 16:22:38 [INFO] [backtest_0]   [buzz_vol_resid] 模拟地址: https://api.worldquantbrain.com/simulations/2xtlx5eO64n68TSyrNN64ZC
+2026-04-28 16:22:38 [INFO] [backtest_0]   [buzz_vol_resid] 进度 10%
+2026-04-28 16:22:39 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:43 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:44 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:22:44 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:48 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:49 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:22:49 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:54 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:22:54 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:22:55 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:22:59 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:00 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:00 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:23:04 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:05 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:05 [INFO] [backtest_1]   [buzz_slope] 进度 35%
+2026-04-28 16:23:10 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:10 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:11 [ERROR] [backtest_1]   [buzz_slope] 回测失败: unknown
+2026-04-28 16:23:11 [INFO] [backtest_1] [buzz_conditional] 开始回测
+2026-04-28 16:23:11 [INFO] [backtest_1]   表达式: buzz = ts_backfill(vec_avg(scl12_buzz), 20); (ts_rank(buzz, 60) > 0.5) ? rank(-ts_delta(close, 2)) : rank(ts_delta(close, 2))
+2026-04-28 16:23:11 [INFO] [backtest_1]   设置: decay=3, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:23:11 [INFO] [MainThread] 进度: 3/15 完成
+2026-04-28 16:23:11 [INFO] [backtest_1]   [buzz_conditional] 模拟地址: https://api.worldquantbrain.com/simulations/1JL9uA1W34NtcL3ovCGS3Yn
+2026-04-28 16:23:12 [INFO] [backtest_1]   [buzz_conditional] 进度 10%
+2026-04-28 16:23:15 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:16 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:17 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:20 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:21 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:22 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:25 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:26 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:28 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:31 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:32 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:34 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:36 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:37 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:39 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:41 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:43 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:44 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:47 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:48 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:50 [INFO] [backtest_1]   [buzz_conditional] 进度 15%
+2026-04-28 16:23:52 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:53 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:23:55 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:23:57 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:23:59 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:00 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:03 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:04 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:06 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:08 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:10 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:11 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:13 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:15 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:16 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:19 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:21 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:22 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:24 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:26 [INFO] [backtest_0]   [buzz_vol_resid] 进度 15%
+2026-04-28 16:24:27 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:29 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:31 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:32 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:35 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:37 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:38 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:40 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:42 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:43 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:45 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:47 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:48 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:51 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:53 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:54 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:24:56 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:24:58 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:24:59 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:05 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:05 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:05 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:10 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:10 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:11 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:16 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:16 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:16 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:21 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:21 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:21 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:26 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:26 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:27 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:32 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:32 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:32 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:37 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:37 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:37 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:42 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:42 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:43 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:48 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:48 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:48 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:53 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:53 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:53 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:25:58 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:25:58 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:25:58 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:04 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:04 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:26:04 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:09 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:09 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:26:09 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:14 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:14 [INFO] [backtest_2]   [buzz_zscore] 进度 35%
+2026-04-28 16:26:14 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:19 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:20 [ERROR] [backtest_2]   [buzz_zscore] 回测失败: unknown
+2026-04-28 16:26:20 [INFO] [backtest_2] [news_ts_sum] 开始回测
+2026-04-28 16:26:20 [INFO] [backtest_2]   表达式: rank(ts_sum(ts_backfill(vec_avg(nws12_afterhsz_sl), 20), 60))
+2026-04-28 16:26:20 [INFO] [backtest_2]   设置: decay=10, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:26:20 [INFO] [MainThread] 进度: 4/15 完成
+2026-04-28 16:26:20 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:20 [INFO] [backtest_2]   [news_ts_sum] 模拟地址: https://api.worldquantbrain.com/simulations/11JRB8fLQ4Dx8GVqoOtCx4K
+2026-04-28 16:26:20 [INFO] [backtest_2]   [news_ts_sum] 进度 10%
+2026-04-28 16:26:25 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:26 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:29 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:31 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:31 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:34 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:36 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:37 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:39 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:41 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:42 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:45 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:47 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:48 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:50 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:52 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:53 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:26:55 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:26:57 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:26:58 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:01 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:03 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:04 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:06 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:08 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:09 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:11 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:13 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:14 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:17 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:19 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:20 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:22 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:24 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:25 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:27 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:29 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:30 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:33 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:35 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:36 [INFO] [backtest_2]   [news_ts_sum] 进度 15%
+2026-04-28 16:27:38 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:40 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:41 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:27:43 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:45 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:46 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:27:49 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:51 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:51 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:27:54 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:27:56 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:27:57 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:00 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:01 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:03 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:05 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:07 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:08 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:10 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:12 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:13 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:15 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:17 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:19 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:21 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:23 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:24 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:26 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:28 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:29 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:31 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:33 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:35 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:37 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:39 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:40 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:42 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:44 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:45 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:47 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:49 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:50 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:53 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:28:54 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:28:56 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:28:58 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:00 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:01 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:03 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:05 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:06 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:09 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:10 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:12 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:14 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:16 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:17 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:19 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:21 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:22 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:25 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:26 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:28 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:30 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:32 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:33 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:35 [INFO] [backtest_0]   [buzz_vol_resid] 进度 35%
+2026-04-28 16:29:37 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:38 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:41 [ERROR] [backtest_0]   [buzz_vol_resid] 回测失败: unknown
+2026-04-28 16:29:41 [INFO] [backtest_0] [news_slope] 开始回测
+2026-04-28 16:29:41 [INFO] [MainThread] 进度: 5/15 完成
+2026-04-28 16:29:41 [INFO] [backtest_0]   表达式: slope = ts_regression(ts_backfill(vec_avg(nws12_afterhsz_sl), 20), ts_step(1), 5, rettype=2); rank(slope)
+2026-04-28 16:29:41 [INFO] [backtest_0]   设置: decay=3, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:29:41 [INFO] [backtest_0]   [news_slope] 模拟地址: https://api.worldquantbrain.com/simulations/AUez23Ni4X8atXCDPcxHdJ
+2026-04-28 16:29:41 [INFO] [backtest_0]   [news_slope] 进度 10%
+2026-04-28 16:29:42 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:44 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:47 [INFO] [backtest_0]   [news_slope] 进度 15%
+2026-04-28 16:29:48 [INFO] [backtest_1]   [buzz_conditional] 进度 35%
+2026-04-28 16:29:49 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:52 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:29:53 [ERROR] [backtest_1]   [buzz_conditional] 回测失败: unknown
+2026-04-28 16:29:53 [INFO] [backtest_1] [news_zscore] 开始回测
+2026-04-28 16:29:53 [INFO] [backtest_1]   表达式: ts_zscore(ts_backfill(vec_avg(nws12_afterhsz_sl), 20), 120)
+2026-04-28 16:29:53 [INFO] [backtest_1]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:29:53 [INFO] [MainThread] 进度: 6/15 完成
+2026-04-28 16:29:53 [INFO] [backtest_1]   [news_zscore] 模拟地址: https://api.worldquantbrain.com/simulations/nVSDm4RJ5hHcw4PTd2X3Xr
+2026-04-28 16:29:54 [INFO] [backtest_1]   [news_zscore] 进度 10%
+2026-04-28 16:29:54 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:29:57 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:29:59 [INFO] [backtest_1]   [news_zscore] 进度 10%
+2026-04-28 16:30:00 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:30:03 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:04 [INFO] [backtest_1]   [news_zscore] 进度 10%
+2026-04-28 16:30:05 [INFO] [backtest_2]   [news_ts_sum] 进度 35%
+2026-04-28 16:30:08 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:10 [INFO] [backtest_1]   [news_zscore] 进度 15%
+2026-04-28 16:30:10 [INFO] [backtest_2]   [news_ts_sum] 回测完成, alpha_id=akAYlV6x
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_ts_sum] Sharpe=1.24, Fitness=0.56, Turnover=0.0428, Returns=0.0253
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_ts_sum] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-28 16:30:11 [INFO] [backtest_2]     LOW_SHARPE: FAIL
+2026-04-28 16:30:11 [INFO] [backtest_2]     LOW_FITNESS: FAIL
+2026-04-28 16:30:11 [INFO] [backtest_2]     LOW_TURNOVER: PASS
+2026-04-28 16:30:11 [INFO] [backtest_2]     HIGH_TURNOVER: PASS
+2026-04-28 16:30:11 [INFO] [backtest_2]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 16:30:11 [INFO] [backtest_2]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 16:30:11 [INFO] [backtest_2]     SELF_CORRELATION: PENDING
+2026-04-28 16:30:11 [INFO] [backtest_2]     MATCHES_COMPETITION: PASS
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_ts_sum] 可提交: 否 ✗
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_ts_sum] 链接: https://platform.worldquantbrain.com/alpha/akAYlV6x
+2026-04-28 16:30:11 [INFO] [backtest_2] [news_momentum] 开始回测
+2026-04-28 16:30:11 [INFO] [backtest_2]   表达式: news = ts_backfill(vec_avg(nws12_afterhsz_sl), 20); rank(ts_sum(news, 60)) * rank(-ts_delta(close, 5))
+2026-04-28 16:30:11 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_momentum] 模拟地址: https://api.worldquantbrain.com/simulations/3iQMpj15K4zz9yaiHCA4KRQ
+2026-04-28 16:30:11 [INFO] [backtest_2]   [news_momentum] 进度 10%
+2026-04-28 16:30:13 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:15 [INFO] [backtest_1]   [news_zscore] 进度 15%
+2026-04-28 16:30:17 [INFO] [backtest_2]   [news_momentum] 进度 15%
+2026-04-28 16:30:18 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:20 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:22 [INFO] [backtest_2]   [news_momentum] 进度 15%
+2026-04-28 16:30:24 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:26 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:27 [INFO] [backtest_2]   [news_momentum] 进度 15%
+2026-04-28 16:30:29 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:31 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:36 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:30:37 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:37 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:41 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:30:42 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:43 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:47 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:30:48 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:48 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:52 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:30:53 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:53 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:30:57 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:30:58 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:30:59 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:03 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:04 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:31:04 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:08 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:09 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:31:09 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:13 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:14 [INFO] [backtest_0]   [news_slope] 进度 35%
+2026-04-28 16:31:15 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:19 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:19 [INFO] [backtest_0]   [news_slope] 回测完成, alpha_id=1Ya9LOOz
+2026-04-28 16:31:20 [INFO] [backtest_0]   [news_slope] Sharpe=-0.11, Fitness=-0.01, Turnover=0.4353, Returns=-0.0026
+2026-04-28 16:31:20 [INFO] [backtest_0]   [news_slope] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-28 16:31:20 [INFO] [backtest_0]     LOW_SHARPE: FAIL
+2026-04-28 16:31:20 [INFO] [backtest_0]     LOW_FITNESS: FAIL
+2026-04-28 16:31:20 [INFO] [backtest_0]     LOW_TURNOVER: PASS
+2026-04-28 16:31:20 [INFO] [backtest_0]     HIGH_TURNOVER: PASS
+2026-04-28 16:31:20 [INFO] [backtest_0]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 16:31:20 [INFO] [backtest_0]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 16:31:20 [INFO] [backtest_0]     SELF_CORRELATION: PENDING
+2026-04-28 16:31:20 [INFO] [backtest_0]     MATCHES_COMPETITION: PASS
+2026-04-28 16:31:20 [INFO] [backtest_0]   [news_slope] 可提交: 否 ✗
+2026-04-28 16:31:20 [INFO] [backtest_0]   [news_slope] 链接: https://platform.worldquantbrain.com/alpha/1Ya9LOOz
+2026-04-28 16:31:20 [INFO] [backtest_0] [buzz_news_combined] 开始回测
+2026-04-28 16:31:20 [INFO] [backtest_0]   表达式: buzz = ts_backfill(vec_avg(scl12_buzz), 20); news = ts_backfill(vec_avg(nws12_afterhsz_sl), 20); rank(ts_sum(buzz, 30) + ts_sum(news, 30))
+2026-04-28 16:31:20 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:31:20 [INFO] [backtest_0]   [buzz_news_combined] 模拟地址: https://api.worldquantbrain.com/simulations/2jtXlx8Yq4mCcIquHfqX2eG
+2026-04-28 16:31:21 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:23 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:24 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:26 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:29 [INFO] [backtest_1]   [news_zscore] 进度 35%
+2026-04-28 16:31:29 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:31 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:34 [INFO] [backtest_1]   [news_zscore] 回测完成, alpha_id=blokMrgZ
+2026-04-28 16:31:34 [INFO] [backtest_1]   [news_zscore] Sharpe=0.21, Fitness=0.03, Turnover=0.2383, Returns=0.0055
+2026-04-28 16:31:34 [INFO] [backtest_1]   [news_zscore] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-28 16:31:34 [INFO] [backtest_1]     LOW_SHARPE: FAIL
+2026-04-28 16:31:34 [INFO] [backtest_1]     LOW_FITNESS: FAIL
+2026-04-28 16:31:34 [INFO] [backtest_1]     LOW_TURNOVER: PASS
+2026-04-28 16:31:34 [INFO] [backtest_1]     HIGH_TURNOVER: PASS
+2026-04-28 16:31:34 [INFO] [backtest_1]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 16:31:34 [INFO] [backtest_1]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 16:31:34 [INFO] [backtest_1]     SELF_CORRELATION: PENDING
+2026-04-28 16:31:34 [INFO] [backtest_1]     MATCHES_COMPETITION: PASS
+2026-04-28 16:31:34 [INFO] [backtest_1]   [news_zscore] 可提交: 否 ✗
+2026-04-28 16:31:34 [INFO] [backtest_1]   [news_zscore] 链接: https://platform.worldquantbrain.com/alpha/blokMrgZ
+2026-04-28 16:31:34 [INFO] [backtest_1] [buzz_news_corr] 开始回测
+2026-04-28 16:31:34 [INFO] [backtest_1]   表达式: buzz = ts_backfill(vec_avg(scl12_buzz), 20); news = ts_backfill(vec_avg(nws12_afterhsz_sl), 20); rank(ts_corr(buzz, news, 20))
+2026-04-28 16:31:34 [INFO] [backtest_1]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 16:31:34 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:35 [INFO] [backtest_1]   [buzz_news_corr] 模拟地址: https://api.worldquantbrain.com/simulations/2bfIVM9qk5dQbRmPAXqbWIC
+2026-04-28 16:31:35 [INFO] [backtest_1]   [buzz_news_corr] 进度 10%
+2026-04-28 16:31:37 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:40 [INFO] [backtest_1]   [buzz_news_corr] 进度 15%
+2026-04-28 16:31:42 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:45 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:46 [INFO] [backtest_1]   [buzz_news_corr] 进度 15%
+2026-04-28 16:31:47 [INFO] [backtest_0]   [buzz_news_combined] 进度 10%
+2026-04-28 16:31:50 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:51 [INFO] [backtest_1]   [buzz_news_corr] 进度 35%
+2026-04-28 16:31:52 [INFO] [backtest_0]   [buzz_news_combined] 进度 15%
+2026-04-28 16:31:56 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:31:56 [INFO] [backtest_1]   [buzz_news_corr] 进度 35%
+2026-04-28 16:31:58 [INFO] [backtest_0]   [buzz_news_combined] 进度 15%
+2026-04-28 16:32:01 [INFO] [backtest_2]   [news_momentum] 进度 35%
+2026-04-28 16:32:02 [INFO] [backtest_1]   [buzz_news_corr] 进度 35%
+2026-04-28 16:32:03 [INFO] [backtest_0]   [buzz_news_combined] 进度 15%

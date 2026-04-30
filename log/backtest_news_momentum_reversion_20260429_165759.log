@@ -1,0 +1,344 @@
+2026-04-29 16:57:59 [INFO] [MainThread] 日志文件: log/backtest_news_momentum_reversion_20260429_165759.log
+2026-04-29 16:58:00 [INFO] [MainThread] ======================================================================
+2026-04-29 16:58:00 [INFO] [MainThread] 回测任务: news_momentum_reversion, 共 8 个变体, 并发数=3
+2026-04-29 16:58:00 [INFO] [MainThread] ======================================================================
+2026-04-29 16:58:00 [INFO] [backtest_0] [news_mom_rev_20] 开始回测
+2026-04-29 16:58:00 [INFO] [backtest_1] [news_mom_rev_mean20] 开始回测
+2026-04-29 16:58:00 [INFO] [backtest_0]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 20); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 16:58:00 [INFO] [backtest_2] [news_mom_rev_60] 开始回测
+2026-04-29 16:58:00 [INFO] [backtest_1]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_mean(news, 20); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 16:58:00 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:58:00 [INFO] [backtest_2]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 60); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 16:58:00 [INFO] [backtest_1]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:58:00 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:58:01 [INFO] [backtest_0]   [news_mom_rev_20] 模拟地址: https://api.worldquantbrain.com/simulations/1mCLN818550hap8ZnwmVh9j
+2026-04-29 16:58:01 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:01 [INFO] [backtest_2]   [news_mom_rev_60] 模拟地址: https://api.worldquantbrain.com/simulations/1CJC1c1eg4n99YH14mVNJhve
+2026-04-29 16:58:02 [INFO] [backtest_1]   [news_mom_rev_mean20] 模拟地址: https://api.worldquantbrain.com/simulations/Mui1nc3X4Qz8T5ntXT7bFr
+2026-04-29 16:58:02 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 10%
+2026-04-29 16:58:03 [INFO] [backtest_2]   [news_mom_rev_60] 进度 10%
+2026-04-29 16:58:06 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:07 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 10%
+2026-04-29 16:58:08 [INFO] [backtest_2]   [news_mom_rev_60] 进度 15%
+2026-04-29 16:58:12 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:13 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 15%
+2026-04-29 16:58:13 [INFO] [backtest_2]   [news_mom_rev_60] 进度 15%
+2026-04-29 16:58:17 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:18 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 15%
+2026-04-29 16:58:19 [INFO] [backtest_2]   [news_mom_rev_60] 进度 15%
+2026-04-29 16:58:22 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:23 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:24 [INFO] [backtest_2]   [news_mom_rev_60] 进度 15%
+2026-04-29 16:58:28 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:29 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:30 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:58:33 [INFO] [backtest_0]   [news_mom_rev_20] 进度 10%
+2026-04-29 16:58:34 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:35 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:58:38 [INFO] [backtest_0]   [news_mom_rev_20] 进度 15%
+2026-04-29 16:58:40 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:40 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:58:44 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:58:45 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:46 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:58:49 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:58:50 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:51 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:58:54 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:58:56 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:58:56 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:00 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:01 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:03 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:05 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:07 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:08 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:10 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:12 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:14 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:16 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:17 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:19 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:21 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:23 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:25 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:27 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:28 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:30 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:32 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:33 [INFO] [backtest_1]   [news_mom_rev_mean20] 进度 35%
+2026-04-29 16:59:35 [INFO] [backtest_2]   [news_mom_rev_60] 进度 35%
+2026-04-29 16:59:37 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_mean20] 回测完成, alpha_id=npZVVVlw
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_mean20] Sharpe=1.24, Fitness=0.55, Turnover=0.1813, Returns=0.0351
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_mean20] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-29 16:59:39 [INFO] [backtest_1]     LOW_SHARPE: FAIL
+2026-04-29 16:59:39 [INFO] [backtest_1]     LOW_FITNESS: FAIL
+2026-04-29 16:59:39 [INFO] [backtest_1]     LOW_TURNOVER: PASS
+2026-04-29 16:59:39 [INFO] [backtest_1]     HIGH_TURNOVER: PASS
+2026-04-29 16:59:39 [INFO] [backtest_1]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 16:59:39 [INFO] [backtest_1]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 16:59:39 [INFO] [backtest_1]     SELF_CORRELATION: PENDING
+2026-04-29 16:59:39 [INFO] [backtest_1]     MATCHES_COMPETITION: PASS
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_mean20] 可提交: 否 ✗
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_mean20] 链接: https://platform.worldquantbrain.com/alpha/npZVVVlw
+2026-04-29 16:59:39 [INFO] [backtest_1] [news_mom_rev_delta2] 开始回测
+2026-04-29 16:59:39 [INFO] [MainThread] 进度: 1/8 完成
+2026-04-29 16:59:39 [INFO] [backtest_1]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 20); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 2))
+2026-04-29 16:59:39 [INFO] [backtest_1]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:59:39 [INFO] [backtest_1]   [news_mom_rev_delta2] 模拟地址: https://api.worldquantbrain.com/simulations/1hkEuB4424MOcIgrZ4QsQ5R
+2026-04-29 16:59:40 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 10%
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_mom_rev_60] 回测完成, alpha_id=1YaEE5Yz
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_mom_rev_60] Sharpe=1.79, Fitness=1.04, Turnover=0.1214, Returns=0.0421
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_mom_rev_60] Checks: 7 PASS, 1 PENDING / 8 total
+2026-04-29 16:59:41 [INFO] [backtest_2]     LOW_SHARPE: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     LOW_FITNESS: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     LOW_TURNOVER: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     HIGH_TURNOVER: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]     SELF_CORRELATION: PENDING
+2026-04-29 16:59:41 [INFO] [backtest_2]     MATCHES_COMPETITION: PASS
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_mom_rev_60] 可提交: 是 ✓
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_mom_rev_60] 链接: https://platform.worldquantbrain.com/alpha/1YaEE5Yz
+2026-04-29 16:59:41 [INFO] [backtest_2] [news_balanced] 开始回测
+2026-04-29 16:59:41 [INFO] [MainThread] 进度: 2/8 完成
+2026-04-29 16:59:41 [INFO] [backtest_2]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 20); rank(signal) > 0.5 ? rank(signal) : -rank(ts_delta(close, 1))
+2026-04-29 16:59:41 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:59:41 [INFO] [backtest_2]   [news_balanced] 模拟地址: https://api.worldquantbrain.com/simulations/203Adi9Jd4LccqrYo2ComNw
+2026-04-29 16:59:42 [INFO] [backtest_2]   [news_balanced] 进度 10%
+2026-04-29 16:59:43 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:45 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 15%
+2026-04-29 16:59:47 [INFO] [backtest_2]   [news_balanced] 进度 10%
+2026-04-29 16:59:48 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:51 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 15%
+2026-04-29 16:59:52 [INFO] [backtest_2]   [news_balanced] 进度 15%
+2026-04-29 16:59:53 [INFO] [backtest_0]   [news_mom_rev_20] 进度 35%
+2026-04-29 16:59:56 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 15%
+2026-04-29 16:59:58 [INFO] [backtest_2]   [news_balanced] 进度 15%
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_mom_rev_20] 回测完成, alpha_id=d5ELLqOj
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_mom_rev_20] Sharpe=1.17, Fitness=0.5, Turnover=0.1808, Returns=0.0333
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_mom_rev_20] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-29 16:59:59 [INFO] [backtest_0]     LOW_SHARPE: FAIL
+2026-04-29 16:59:59 [INFO] [backtest_0]     LOW_FITNESS: FAIL
+2026-04-29 16:59:59 [INFO] [backtest_0]     LOW_TURNOVER: PASS
+2026-04-29 16:59:59 [INFO] [backtest_0]     HIGH_TURNOVER: PASS
+2026-04-29 16:59:59 [INFO] [backtest_0]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 16:59:59 [INFO] [backtest_0]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 16:59:59 [INFO] [backtest_0]     SELF_CORRELATION: PENDING
+2026-04-29 16:59:59 [INFO] [backtest_0]     MATCHES_COMPETITION: PASS
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_mom_rev_20] 可提交: 否 ✗
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_mom_rev_20] 链接: https://platform.worldquantbrain.com/alpha/d5ELLqOj
+2026-04-29 16:59:59 [INFO] [backtest_0] [news_backfill_sum] 开始回测
+2026-04-29 16:59:59 [INFO] [MainThread] 进度: 3/8 完成
+2026-04-29 16:59:59 [INFO] [backtest_0]   表达式: news = ts_backfill(vec_avg(nws12_afterhsz_sl), 5); signal = ts_sum(news, 20); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 16:59:59 [INFO] [backtest_0]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 16:59:59 [INFO] [backtest_0]   [news_backfill_sum] 模拟地址: https://api.worldquantbrain.com/simulations/4xKSgg9YO4Nw8zMqqyjquks
+2026-04-29 17:00:00 [INFO] [backtest_0]   [news_backfill_sum] 进度 10%
+2026-04-29 17:00:01 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:03 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:05 [INFO] [backtest_0]   [news_backfill_sum] 进度 15%
+2026-04-29 17:00:07 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:08 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:11 [INFO] [backtest_0]   [news_backfill_sum] 进度 15%
+2026-04-29 17:00:12 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:14 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:16 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:17 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:19 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:22 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:23 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:24 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:27 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:30 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:31 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:32 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:35 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:36 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:38 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:40 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:42 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:44 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:46 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:47 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:49 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:51 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:52 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:00:54 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:00:56 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:00:58 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:01:00 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:02 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:01:03 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:01:05 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:07 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:01:08 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:01:10 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:13 [INFO] [backtest_1]   [news_mom_rev_delta2] 进度 35%
+2026-04-29 17:01:14 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:01:16 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:18 [INFO] [backtest_1]   [news_mom_rev_delta2] 回测完成, alpha_id=N1g995lg
+2026-04-29 17:01:18 [INFO] [backtest_1]   [news_mom_rev_delta2] Sharpe=1.19, Fitness=0.53, Turnover=0.1779, Returns=0.0353
+2026-04-29 17:01:18 [INFO] [backtest_1]   [news_mom_rev_delta2] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-29 17:01:18 [INFO] [backtest_1]     LOW_SHARPE: FAIL
+2026-04-29 17:01:18 [INFO] [backtest_1]     LOW_FITNESS: FAIL
+2026-04-29 17:01:18 [INFO] [backtest_1]     LOW_TURNOVER: PASS
+2026-04-29 17:01:18 [INFO] [backtest_1]     HIGH_TURNOVER: PASS
+2026-04-29 17:01:18 [INFO] [backtest_1]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 17:01:18 [INFO] [backtest_1]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 17:01:18 [INFO] [backtest_1]     SELF_CORRELATION: PENDING
+2026-04-29 17:01:18 [INFO] [backtest_1]     MATCHES_COMPETITION: PASS
+2026-04-29 17:01:18 [INFO] [backtest_1]   [news_mom_rev_delta2] 可提交: 否 ✗
+2026-04-29 17:01:18 [INFO] [backtest_1]   [news_mom_rev_delta2] 链接: https://platform.worldquantbrain.com/alpha/N1g995lg
+2026-04-29 17:01:18 [INFO] [backtest_1] [news_group_cond] 开始回测
+2026-04-29 17:01:18 [INFO] [MainThread] 进度: 4/8 完成
+2026-04-29 17:01:18 [INFO] [backtest_1]   表达式: news = ts_backfill(vec_avg(nws12_afterhsz_sl), 5); signal = group_zscore(ts_sum(news, 20), subindustry); signal > 0 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 17:01:18 [INFO] [backtest_1]   设置: decay=5, neutralization=MARKET, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 17:01:19 [INFO] [backtest_1]   [news_group_cond] 模拟地址: https://api.worldquantbrain.com/simulations/4f37hOdU75b1bLltNHnY2on
+2026-04-29 17:01:19 [INFO] [backtest_1]   [news_group_cond] 进度 10%
+2026-04-29 17:01:20 [INFO] [backtest_2]   [news_balanced] 进度 35%
+2026-04-29 17:01:21 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:25 [INFO] [backtest_1]   [news_group_cond] 进度 15%
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_balanced] 回测完成, alpha_id=bloEEoLR
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_balanced] Sharpe=1.25, Fitness=0.55, Turnover=0.1871, Returns=0.0362
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_balanced] Checks: 6 PASS, 1 PENDING / 8 total
+2026-04-29 17:01:26 [INFO] [backtest_2]     LOW_SHARPE: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]     LOW_FITNESS: FAIL
+2026-04-29 17:01:26 [INFO] [backtest_2]     LOW_TURNOVER: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]     HIGH_TURNOVER: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]     SELF_CORRELATION: PENDING
+2026-04-29 17:01:26 [INFO] [backtest_2]     MATCHES_COMPETITION: PASS
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_balanced] 可提交: 否 ✗
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_balanced] 链接: https://platform.worldquantbrain.com/alpha/bloEEoLR
+2026-04-29 17:01:26 [INFO] [backtest_2] [news_strict_07] 开始回测
+2026-04-29 17:01:26 [INFO] [MainThread] 进度: 5/8 完成
+2026-04-29 17:01:26 [INFO] [backtest_2]   表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 20); rank(signal) > 0.7 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 17:01:26 [INFO] [backtest_2]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-29 17:01:26 [INFO] [backtest_2]   [news_strict_07] 模拟地址: https://api.worldquantbrain.com/simulations/4e0QhY474gz9iAbZXWAV8g
+2026-04-29 17:01:26 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:27 [INFO] [backtest_2]   [news_strict_07] 进度 10%
+2026-04-29 17:01:30 [INFO] [backtest_1]   [news_group_cond] 进度 15%
+2026-04-29 17:01:32 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:32 [INFO] [backtest_2]   [news_strict_07] 进度 10%
+2026-04-29 17:01:35 [INFO] [backtest_1]   [news_group_cond] 进度 15%
+2026-04-29 17:01:37 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:37 [INFO] [backtest_2]   [news_strict_07] 进度 15%
+2026-04-29 17:01:41 [INFO] [backtest_1]   [news_group_cond] 进度 15%
+2026-04-29 17:01:42 [INFO] [backtest_0]   [news_backfill_sum] 进度 35%
+2026-04-29 17:01:43 [INFO] [backtest_2]   [news_strict_07] 进度 15%
+2026-04-29 17:01:46 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:01:48 [INFO] [backtest_0]   [news_backfill_sum] 回测完成, alpha_id=O0baaoNY
+2026-04-29 17:01:48 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:01:48 [INFO] [backtest_0]   [news_backfill_sum] Sharpe=1.19, Fitness=0.52, Turnover=0.1644, Returns=0.0319
+2026-04-29 17:01:48 [INFO] [backtest_0]   [news_backfill_sum] Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-29 17:01:48 [INFO] [backtest_0]     LOW_SHARPE: FAIL
+2026-04-29 17:01:48 [INFO] [backtest_0]     LOW_FITNESS: FAIL
+2026-04-29 17:01:48 [INFO] [backtest_0]     LOW_TURNOVER: PASS
+2026-04-29 17:01:48 [INFO] [backtest_0]     HIGH_TURNOVER: PASS
+2026-04-29 17:01:48 [INFO] [backtest_0]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 17:01:48 [INFO] [backtest_0]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 17:01:48 [INFO] [backtest_0]     SELF_CORRELATION: PENDING
+2026-04-29 17:01:48 [INFO] [backtest_0]     MATCHES_COMPETITION: PASS
+2026-04-29 17:01:48 [INFO] [backtest_0]   [news_backfill_sum] 可提交: 否 ✗
+2026-04-29 17:01:48 [INFO] [backtest_0]   [news_backfill_sum] 链接: https://platform.worldquantbrain.com/alpha/O0baaoNY
+2026-04-29 17:01:48 [INFO] [MainThread] 进度: 6/8 完成
+2026-04-29 17:01:51 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:01:55 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:01:57 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:00 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:02 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:05 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:08 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:11 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:13 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:16 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:19 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:21 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:24 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:27 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:29 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:33 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:35 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:39 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:40 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:44 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:46 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:49 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:51 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:02:55 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:02:56 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:00 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:03:02 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:05 [INFO] [backtest_2]   [news_strict_07] 进度 35%
+2026-04-29 17:03:07 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:11 [INFO] [backtest_2]   [news_strict_07] 回测完成, alpha_id=vReggkVb
+2026-04-29 17:03:11 [INFO] [backtest_2]   [news_strict_07] Sharpe=1.33, Fitness=0.59, Turnover=0.1932, Returns=0.0378
+2026-04-29 17:03:11 [INFO] [backtest_2]   [news_strict_07] Checks: 6 PASS, 1 PENDING / 8 total
+2026-04-29 17:03:11 [INFO] [backtest_2]     LOW_SHARPE: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]     LOW_FITNESS: FAIL
+2026-04-29 17:03:11 [INFO] [backtest_2]     LOW_TURNOVER: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]     HIGH_TURNOVER: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]     SELF_CORRELATION: PENDING
+2026-04-29 17:03:11 [INFO] [backtest_2]     MATCHES_COMPETITION: PASS
+2026-04-29 17:03:11 [INFO] [backtest_2]   [news_strict_07] 可提交: 否 ✗
+2026-04-29 17:03:11 [INFO] [backtest_2]   [news_strict_07] 链接: https://platform.worldquantbrain.com/alpha/vReggkVb
+2026-04-29 17:03:11 [INFO] [MainThread] 进度: 7/8 完成
+2026-04-29 17:03:13 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:18 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:23 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:29 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:34 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:39 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:45 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:50 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:03:56 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:01 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:06 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:12 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:17 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:22 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:28 [INFO] [backtest_1]   [news_group_cond] 进度 35%
+2026-04-29 17:04:33 [INFO] [backtest_1]   [news_group_cond] 回测完成, alpha_id=A1gKKLxd
+2026-04-29 17:04:34 [INFO] [backtest_1]   [news_group_cond] Sharpe=1.68, Fitness=0.9, Turnover=0.1476, Returns=0.0425
+2026-04-29 17:04:34 [INFO] [backtest_1]   [news_group_cond] Checks: 6 PASS, 1 PENDING / 8 total
+2026-04-29 17:04:34 [INFO] [backtest_1]     LOW_SHARPE: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]     LOW_FITNESS: FAIL
+2026-04-29 17:04:34 [INFO] [backtest_1]     LOW_TURNOVER: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]     HIGH_TURNOVER: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]     CONCENTRATED_WEIGHT: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]     SELF_CORRELATION: PENDING
+2026-04-29 17:04:34 [INFO] [backtest_1]     MATCHES_COMPETITION: PASS
+2026-04-29 17:04:34 [INFO] [backtest_1]   [news_group_cond] 可提交: 否 ✗
+2026-04-29 17:04:34 [INFO] [backtest_1]   [news_group_cond] 链接: https://platform.worldquantbrain.com/alpha/A1gKKLxd
+2026-04-29 17:04:34 [INFO] [MainThread] 进度: 8/8 完成
+2026-04-29 17:04:34 [INFO] [MainThread] 
+======================================================================
+2026-04-29 17:04:34 [INFO] [MainThread] 回测结果汇总 - news_momentum_reversion
+2026-04-29 17:04:34 [INFO] [MainThread] ======================================================================
+2026-04-29 17:04:34 [INFO] [MainThread] 变体                          Sharpe  Fitness      TO%      Ret       Checks    可提交
+2026-04-29 17:04:34 [INFO] [MainThread] --------------------------------------------------------------------------------
+2026-04-29 17:04:34 [INFO] [MainThread] news_mom_rev_20               1.17      0.5    18.1%   0.0333      5P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_mom_rev_mean20           1.24     0.55    18.1%   0.0351      5P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_mom_rev_60               1.79     1.04    12.1%   0.0421      7P+1D/8      ✓
+2026-04-29 17:04:34 [INFO] [MainThread] news_mom_rev_delta2           1.19     0.53    17.8%   0.0353      5P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_balanced                 1.25     0.55    18.7%   0.0362      6P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_backfill_sum             1.19     0.52    16.4%   0.0319      5P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_group_cond               1.68      0.9    14.8%   0.0425      6P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] news_strict_07                1.33     0.59    19.3%   0.0378      6P+1D/8      ✗
+2026-04-29 17:04:34 [INFO] [MainThread] 
+======================================================================
+2026-04-29 17:04:34 [INFO] [MainThread] 可提交候选 (共 1 个)
+2026-04-29 17:04:34 [INFO] [MainThread] ======================================================================
+2026-04-29 17:04:34 [INFO] [MainThread]   [news_mom_rev_60] alpha_id=1YaEE5Yz
+2026-04-29 17:04:34 [INFO] [MainThread]     表达式: news = vec_avg(nws12_afterhsz_sl); signal = ts_sum(news, 60); rank(signal) > 0.5 ? 1 : -rank(ts_delta(close, 1))
+2026-04-29 17:04:34 [INFO] [MainThread]     Sharpe=1.79, Fitness=1.04, TO=0.1214, Ret=0.0421
+2026-04-29 17:04:34 [INFO] [MainThread]     设置: decay=5, neut=SUBINDUSTRY, trunc=0.08
+2026-04-29 17:04:34 [INFO] [MainThread]     链接: https://platform.worldquantbrain.com/alpha/1YaEE5Yz
+2026-04-29 17:04:34 [INFO] [MainThread] 
+CSV 结果已保存: file/backtest_news_momentum_reversion_20260429_165759.csv
+2026-04-29 17:04:34 [INFO] [MainThread] 日志已保存: log/backtest_news_momentum_reversion_20260429_165759.log

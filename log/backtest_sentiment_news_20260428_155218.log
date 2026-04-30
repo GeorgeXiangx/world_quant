@@ -1,0 +1,10 @@
+2026-04-28 15:52:18 [INFO] 日志文件: log/backtest_sentiment_news_20260428_155218.log
+2026-04-28 15:52:20 [INFO] ======================================================================
+2026-04-28 15:52:20 [INFO] 回测任务: sentiment_news, 共 15 个变体
+2026-04-28 15:52:20 [INFO] ======================================================================
+2026-04-28 15:52:20 [INFO] 
+--- [1/15] ---
+2026-04-28 15:52:20 [INFO] [buzz_ts_rank] 开始回测
+2026-04-28 15:52:20 [INFO]   表达式: rank(ts_sum(vec_avg(scl12_buzz), 60))
+2026-04-28 15:52:20 [INFO]   设置: decay=5, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 15:52:20 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/HiW5F58w4pvcndFIvgNEkz

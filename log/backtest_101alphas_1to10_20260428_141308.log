@@ -1,0 +1,196 @@
+2026-04-28 14:13:08 [INFO] 日志文件: file/backtest_101alphas_1to10_20260428_141308.log
+2026-04-28 14:13:10 [INFO] ======================================================================
+2026-04-28 14:13:10 [INFO] 回测任务: 101alphas_1to10, 共 10 个变体
+2026-04-28 14:13:10 [INFO] ======================================================================
+2026-04-28 14:13:10 [INFO] 
+--- [1/10] ---
+2026-04-28 14:13:10 [INFO] [Alpha#1] 开始回测
+2026-04-28 14:13:10 [INFO]   表达式: (rank(ts_arg_max(signed_power(((returns < 0) ? ts_std_dev(returns, 20) : close), 2), 5)) - 0.5)
+2026-04-28 14:13:10 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:13:10 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/1cFWDl8EX5eD9Ulyy0HNk14
+2026-04-28 14:14:41 [INFO]   回测完成, alpha_id=QP2JPjlQ
+2026-04-28 14:14:42 [INFO]   结果: Sharpe=1.59, Fitness=0.7, Turnover=0.5168, Returns=0.1003
+2026-04-28 14:14:42 [INFO]   Checks: 6 PASS, 1 PENDING / 9 total
+2026-04-28 14:14:42 [INFO]     LOW_SHARPE: PASS
+2026-04-28 14:14:42 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:14:42 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:14:42 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:14:42 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:14:42 [INFO]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 14:14:42 [INFO]     UNITS: WARNING
+2026-04-28 14:14:42 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:14:42 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:14:42 [INFO]   可提交: 否
+2026-04-28 14:14:42 [INFO]   链接: https://platform.worldquantbrain.com/alpha/QP2JPjlQ
+2026-04-28 14:14:42 [INFO] 
+--- [2/10] ---
+2026-04-28 14:14:42 [INFO] [Alpha#2] 开始回测
+2026-04-28 14:14:42 [INFO]   表达式: (-1 * ts_corr(rank(ts_delta(log(volume), 2)), rank(((close - open) / open)), 6))
+2026-04-28 14:14:42 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:14:42 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/2UhaXGcg55a6bi51taRxotS
+2026-04-28 14:16:25 [INFO]   回测完成, alpha_id=om3pmKwJ
+2026-04-28 14:16:26 [INFO]   结果: Sharpe=0.5, Fitness=0.11, Turnover=0.3238, Returns=0.0143
+2026-04-28 14:16:26 [INFO]   Checks: 4 PASS, 1 PENDING / 9 total
+2026-04-28 14:16:26 [INFO]     LOW_SHARPE: FAIL
+2026-04-28 14:16:26 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:16:26 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:16:26 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:16:26 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:16:26 [INFO]     LOW_SUB_UNIVERSE_SHARPE: FAIL
+2026-04-28 14:16:26 [INFO]     UNITS: WARNING
+2026-04-28 14:16:26 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:16:26 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:16:26 [INFO]   可提交: 否
+2026-04-28 14:16:26 [INFO]   链接: https://platform.worldquantbrain.com/alpha/om3pmKwJ
+2026-04-28 14:16:26 [INFO] 
+--- [3/10] ---
+2026-04-28 14:16:26 [INFO] [Alpha#3] 开始回测
+2026-04-28 14:16:26 [INFO]   表达式: (-1 * ts_corr(rank(open), rank(volume), 10))
+2026-04-28 14:16:26 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:16:26 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/33MG0e58o4A8ayrdK6UjV3O
+2026-04-28 14:18:29 [INFO]   回测完成, alpha_id=0melmrE8
+2026-04-28 14:18:29 [INFO]   结果: Sharpe=0.36, Fitness=0.07, Turnover=0.2859, Returns=0.0116
+2026-04-28 14:18:29 [INFO]   Checks: 4 PASS, 1 PENDING / 8 total
+2026-04-28 14:18:29 [INFO]     LOW_SHARPE: FAIL
+2026-04-28 14:18:29 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:18:29 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:18:29 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:18:29 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:18:29 [INFO]     LOW_SUB_UNIVERSE_SHARPE: FAIL
+2026-04-28 14:18:29 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:18:29 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:18:29 [INFO]   可提交: 否
+2026-04-28 14:18:29 [INFO]   链接: https://platform.worldquantbrain.com/alpha/0melmrE8
+2026-04-28 14:18:29 [INFO] 
+--- [4/10] ---
+2026-04-28 14:18:29 [INFO] [Alpha#4] 开始回测
+2026-04-28 14:18:29 [INFO]   表达式: (-1 * ts_rank(rank(low), 9))
+2026-04-28 14:18:29 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:18:30 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/15gCzC7Np4vXcnkdE6iPmZW
+2026-04-28 14:22:53 [INFO]   回测完成, alpha_id=YP2rLjqM
+2026-04-28 14:22:53 [INFO]   结果: Sharpe=1.13, Fitness=0.63, Turnover=0.3404, Returns=0.1066
+2026-04-28 14:22:53 [INFO]   Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-28 14:22:53 [INFO]     LOW_SHARPE: FAIL
+2026-04-28 14:22:53 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:22:53 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:22:53 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:22:53 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:22:53 [INFO]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 14:22:53 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:22:53 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:22:53 [INFO]   可提交: 否
+2026-04-28 14:22:53 [INFO]   链接: https://platform.worldquantbrain.com/alpha/YP2rLjqM
+2026-04-28 14:22:53 [INFO] 
+--- [5/10] ---
+2026-04-28 14:22:53 [INFO] [Alpha#5] 开始回测
+2026-04-28 14:22:53 [INFO]   表达式: (rank((open - (ts_sum(vwap, 10) / 10))) * (-1 * abs(rank((close - vwap)))))
+2026-04-28 14:22:53 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:22:54 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/2xa0Eu2hj4R2a0N1eKxi0H6g
+2026-04-28 14:27:26 [INFO]   回测完成, alpha_id=N1gwxngp
+2026-04-28 14:27:26 [INFO]   结果: Sharpe=1.42, Fitness=0.75, Turnover=0.3944, Returns=0.1107
+2026-04-28 14:27:26 [INFO]   Checks: 6 PASS, 1 PENDING / 8 total
+2026-04-28 14:27:26 [INFO]     LOW_SHARPE: PASS
+2026-04-28 14:27:26 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:27:26 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:27:26 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:27:26 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:27:26 [INFO]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 14:27:26 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:27:26 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:27:26 [INFO]   可提交: 否
+2026-04-28 14:27:26 [INFO]   链接: https://platform.worldquantbrain.com/alpha/N1gwxngp
+2026-04-28 14:27:26 [INFO] 
+--- [6/10] ---
+2026-04-28 14:27:26 [INFO] [Alpha#6] 开始回测
+2026-04-28 14:27:26 [INFO]   表达式: (-1 * ts_corr(open, volume, 10))
+2026-04-28 14:27:26 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:27:26 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/1IfeJvbCZ4H2bXi1frl67Xsh
+2026-04-28 14:28:47 [INFO]   回测完成, alpha_id=88ao5eN7
+2026-04-28 14:28:48 [INFO]   结果: Sharpe=0.84, Fitness=0.31, Turnover=0.2866, Returns=0.0387
+2026-04-28 14:28:48 [INFO]   Checks: 4 PASS, 1 PENDING / 8 total
+2026-04-28 14:28:48 [INFO]     LOW_SHARPE: FAIL
+2026-04-28 14:28:48 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:28:48 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:28:48 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:28:48 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:28:48 [INFO]     LOW_SUB_UNIVERSE_SHARPE: FAIL
+2026-04-28 14:28:48 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:28:48 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:28:48 [INFO]   可提交: 否
+2026-04-28 14:28:48 [INFO]   链接: https://platform.worldquantbrain.com/alpha/88ao5eN7
+2026-04-28 14:28:48 [INFO] 
+--- [7/10] ---
+2026-04-28 14:28:48 [INFO] [Alpha#7] 开始回测
+2026-04-28 14:28:48 [INFO]   表达式: ((ts_mean(volume, 20) < volume) ? ((-1 * ts_rank(abs(ts_delta(close, 7)), 60)) * sign(ts_delta(close, 7))) : (-1 * 1))
+2026-04-28 14:28:48 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:28:49 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/4nXGwD6yL4KTbyPzN4houdj
+2026-04-28 14:30:37 [INFO]   回测完成, alpha_id=vReqw1ja
+2026-04-28 14:30:37 [INFO]   结果: Sharpe=1.3, Fitness=0.56, Turnover=0.4359, Returns=0.0799
+2026-04-28 14:30:37 [INFO]   Checks: 6 PASS, 1 PENDING / 8 total
+2026-04-28 14:30:37 [INFO]     LOW_SHARPE: PASS
+2026-04-28 14:30:37 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:30:37 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:30:37 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:30:37 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:30:37 [INFO]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 14:30:37 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:30:37 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:30:37 [INFO]   可提交: 否
+2026-04-28 14:30:37 [INFO]   链接: https://platform.worldquantbrain.com/alpha/vReqw1ja
+2026-04-28 14:30:37 [INFO] 
+--- [8/10] ---
+2026-04-28 14:30:37 [INFO] [Alpha#8] 开始回测
+2026-04-28 14:30:37 [INFO]   表达式: (-1 * rank(((ts_sum(open, 5) * ts_sum(returns, 5)) - ts_delay((ts_sum(open, 5) * ts_sum(returns, 5)), 10))))
+2026-04-28 14:30:37 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:30:38 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/a7cp8e3Z4Cq9z9IepL70Hf
+2026-04-28 14:32:32 [INFO]   回测完成, alpha_id=qMP19V2V
+2026-04-28 14:32:32 [INFO]   结果: Sharpe=1.23, Fitness=0.56, Turnover=0.3568, Returns=0.0746
+2026-04-28 14:32:32 [INFO]   Checks: 5 PASS, 1 PENDING / 8 total
+2026-04-28 14:32:32 [INFO]     LOW_SHARPE: FAIL
+2026-04-28 14:32:32 [INFO]     LOW_FITNESS: FAIL
+2026-04-28 14:32:32 [INFO]     LOW_TURNOVER: PASS
+2026-04-28 14:32:32 [INFO]     HIGH_TURNOVER: PASS
+2026-04-28 14:32:32 [INFO]     CONCENTRATED_WEIGHT: PASS
+2026-04-28 14:32:32 [INFO]     LOW_SUB_UNIVERSE_SHARPE: PASS
+2026-04-28 14:32:32 [INFO]     SELF_CORRELATION: PENDING
+2026-04-28 14:32:32 [INFO]     MATCHES_COMPETITION: PASS
+2026-04-28 14:32:32 [INFO]   可提交: 否
+2026-04-28 14:32:32 [INFO]   链接: https://platform.worldquantbrain.com/alpha/qMP19V2V
+2026-04-28 14:32:32 [INFO] 
+--- [9/10] ---
+2026-04-28 14:32:32 [INFO] [Alpha#9] 开始回测
+2026-04-28 14:32:32 [INFO]   表达式: ((0 < ts_min(ts_delta(close, 1), 5)) ? ts_delta(close, 1) : ((ts_max(ts_delta(close, 1), 5) < 0) ? ts_delta(close, 1) : (-1 * ts_delta(close, 1))))
+2026-04-28 14:32:32 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:32:32 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/2IauUk7y74pK9X39CeYjANb
+2026-04-28 14:32:38 [ERROR]   回测错误: Attempted to use inaccessible or unknown operator "ts_min". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>
+2026-04-28 14:32:38 [INFO] 
+--- [10/10] ---
+2026-04-28 14:32:38 [INFO] [Alpha#10] 开始回测
+2026-04-28 14:32:38 [INFO]   表达式: rank(((0 < ts_min(ts_delta(close, 1), 4)) ? ts_delta(close, 1) : ((ts_max(ts_delta(close, 1), 4) < 0) ? ts_delta(close, 1) : (-1 * ts_delta(close, 1)))))
+2026-04-28 14:32:38 [INFO]   设置: decay=6, neutralization=SUBINDUSTRY, truncation=0.08, universe=TOP3000, region=USA, delay=1
+2026-04-28 14:32:38 [INFO]   模拟地址: https://api.worldquantbrain.com/simulations/3qC2HU6eN4w4a28LuowqjyH
+2026-04-28 14:32:49 [ERROR]   回测错误: Attempted to use inaccessible or unknown operator "ts_min". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>
+2026-04-28 14:32:49 [INFO] 
+======================================================================
+2026-04-28 14:32:49 [INFO] 回测结果汇总 - 101alphas_1to10
+2026-04-28 14:32:49 [INFO] ======================================================================
+2026-04-28 14:32:49 [INFO] 变体                          Sharpe  Fitness      TO%      Ret       Checks    可提交
+2026-04-28 14:32:49 [INFO] --------------------------------------------------------------------------------
+2026-04-28 14:32:49 [INFO] Alpha#1                       1.59      0.7    51.7%   0.1003      6P+1D/9      ✗
+2026-04-28 14:32:49 [INFO] Alpha#2                        0.5     0.11    32.4%   0.0143      4P+1D/9      ✗
+2026-04-28 14:32:49 [INFO] Alpha#3                       0.36     0.07    28.6%   0.0116      4P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] Alpha#4                       1.13     0.63    34.0%   0.1066      5P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] Alpha#5                       1.42     0.75    39.4%   0.1107      6P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] Alpha#6                       0.84     0.31    28.7%   0.0387      4P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] Alpha#7                        1.3     0.56    43.6%   0.0799      6P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] Alpha#8                       1.23     0.56    35.7%   0.0746      5P+1D/8      ✗
+2026-04-28 14:32:49 [INFO] FAILED                   
+2026-04-28 14:32:49 [INFO] FAILED                   
+2026-04-28 14:32:49 [INFO] 
+======================================================================
+2026-04-28 14:32:49 [INFO] 可提交候选 (共 0 个)
+2026-04-28 14:32:49 [INFO] ======================================================================
+2026-04-28 14:32:49 [INFO]   暂无可提交候选
+2026-04-28 14:32:49 [INFO] 
+CSV 结果已保存: file/backtest_101alphas_1to10_20260428_141308.csv
+2026-04-28 14:32:49 [INFO] 日志已保存: file/backtest_101alphas_1to10_20260428_141308.log
