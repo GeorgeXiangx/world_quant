@@ -23,8 +23,8 @@ ops_set = basic_ops + ts_ops
 
 
 def login():
-    username = ""
-    password = ""
+    username = "359830186@qq.com"
+    password = "YhIU3Tc5owkpO"
 
     # Create a session to persistently store the headers
     s = requests.Session()
@@ -52,6 +52,40 @@ def get_datasets(
     return datasets_df
 
 
+# def get_datafields(
+#         s,
+#         instrument_type: str = 'EQUITY',
+#         region: str = 'USA',
+#         delay: int = 1,
+#         universe: str = 'TOP3000',
+#         dataset_id: str = '',
+#         search: str = ''
+# ):
+#     if len(search) == 0:
+#         url_template = "https://api.worldquantbrain.com/data-fields?" + \
+#                        f"&instrumentType={instrument_type}" + \
+#                        f"&region={region}&delay={str(delay)}&universe={universe}&dataset.id={dataset_id}&limit=50" + \
+#                        "&offset={x}"
+#         count = s.get(url_template.format(x=0)).json()['count']
+#
+#     else:
+#         url_template = "https://api.worldquantbrain.com/data-fields?" + \
+#                        f"&instrumentType={instrument_type}" + \
+#                        f"&region={region}&delay={str(delay)}&universe={universe}&limit=50" + \
+#                        f"&search={search}" + \
+#                        "&offset={x}"
+#         count = 100
+#
+#     datafields_list = []
+#     for x in range(0, count, 50):
+#         datafields = s.get(url_template.format(x=x))
+#         datafields_list.append(datafields.json()['results'])
+#
+#     datafields_list_flat = [item for sublist in datafields_list for item in sublist]
+#
+#     datafields_df = pd.DataFrame(datafields_list_flat)
+#     return datafields_df
+
 def get_datafields(
         s,
         instrument_type: str = 'EQUITY',
@@ -61,12 +95,24 @@ def get_datafields(
         dataset_id: str = '',
         search: str = ''
 ):
+    def _get_json_with_retry(url: str, required_key: str):
+        # 接口偶发返回非预期结构（例如限流/临时错误页面），这里持续重试直到拿到目标字段
+        while True:
+            try:
+                payload = s.get(url).json()
+                if required_key in payload:
+                    return payload
+            except Exception:
+                pass
+            print(f"get_datafields retrying for key: {required_key}")
+            sleep(1)
+
     if len(search) == 0:
         url_template = "https://api.worldquantbrain.com/data-fields?" + \
                        f"&instrumentType={instrument_type}" + \
                        f"&region={region}&delay={str(delay)}&universe={universe}&dataset.id={dataset_id}&limit=50" + \
                        "&offset={x}"
-        count = s.get(url_template.format(x=0)).json()['count']
+        count = _get_json_with_retry(url_template.format(x=0), "count")['count']
 
     else:
         url_template = "https://api.worldquantbrain.com/data-fields?" + \
@@ -78,8 +124,8 @@ def get_datafields(
 
     datafields_list = []
     for x in range(0, count, 50):
-        datafields = s.get(url_template.format(x=x))
-        datafields_list.append(datafields.json()['results'])
+        payload = _get_json_with_retry(url_template.format(x=x), "results")
+        datafields_list.append(payload['results'])
 
     datafields_list_flat = [item for sublist in datafields_list for item in sublist]
 
