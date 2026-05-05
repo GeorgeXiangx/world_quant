@@ -337,13 +337,13 @@ def get_alphas(start_date, end_date, sharpe_th, fitness_th, region, alpha_num, u
     for i in range(0, alpha_num, 100):
         print(i)
         url_e = "https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=%d" % (i) \
-                + "&status=UNSUBMITTED%1FIS_FAIL&dateCreated%3E=2025-" + start_date \
-                + "T00:00:00-04:00&dateCreated%3C2025-" + end_date \
+                + "&status=UNSUBMITTED%1FIS_FAIL&dateCreated%3E=2026-" + start_date \
+                + "T00:00:00-04:00&dateCreated%3C2026-" + end_date \
                 + "T00:00:00-04:00&is.fitness%3E" + str(fitness_th) + "&is.sharpe%3E" \
                 + str(sharpe_th) + "&settings.region=" + region + "&order=-is.sharpe&hidden=false&type!=SUPER"
         url_c = "https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=%d" % (i) \
-                + "&status=UNSUBMITTED%1FIS_FAIL&dateCreated%3E=2025-" + start_date \
-                + "T00:00:00-04:00&dateCreated%3C2025-" + end_date \
+                + "&status=UNSUBMITTED%1FIS_FAIL&dateCreated%3E=2026-" + start_date \
+                + "T00:00:00-04:00&dateCreated%3C2026-" + end_date \
                 + "T00:00:00-04:00&is.fitness%3C-" + str(fitness_th) + "&is.sharpe%3C-" \
                 + str(sharpe_th) + "&settings.region=" + region + "&order=is.sharpe&hidden=false&type!=SUPER"
         urls = [url_e]
