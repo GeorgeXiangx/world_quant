@@ -30,7 +30,7 @@ from offical.user.machine_lib import (
 
 # ===== 可配置参数 =====
 DATASET_ID = 'analyst4'       # 数据集 ID
-MAX_SAMPLES = 900             # 随机采样上限 (超过则随机采样)
+MAX_SAMPLES = 1000             # 随机采样上限 (超过则随机采样)
 # DECAY_VALUES = [0, 3, 5]      # decay 参数变体
 DECAY_VALUES = [4]      # decay 参数变体
 NEUTRALIZATION = 'SUBINDUSTRY' # 中性化方式

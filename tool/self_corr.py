@@ -304,3 +304,11 @@ if __name__ == '__main__':
     # 增量下载数据
     download_data(flag_increment=True)
 
+    alpha_id = 'npnonMoM'
+    os_alpha_ids, os_alpha_rets = load_data()
+    res = calc_self_corr(
+        alpha_id=alpha_id,
+        os_alpha_rets=os_alpha_rets,
+        os_alpha_ids=os_alpha_ids,
+    )
+    print(res)
