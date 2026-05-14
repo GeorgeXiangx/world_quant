@@ -10,6 +10,7 @@ import pymysql
 import json
 import hashlib
 import threading
+import logging
 from datetime import datetime
 
 # ======================== MySQL 配置（按需修改） ========================
@@ -120,7 +121,7 @@ def init_db():
             except pymysql.err.OperationalError:
                 pass  # 旧版 MySQL 不支持 IF NOT EXISTS，忽略已存在报错
         conn.commit()
-        print(f"[alpha_db] 数据库表初始化成功: {MYSQL_CONFIG['database']}.backtest_results")
+        logging.info(f"数据库表初始化成功: {MYSQL_CONFIG['database']}.backtest_results")
     finally:
         conn.close()
 
@@ -373,5 +374,5 @@ try:
     else:
         conn.close()
 except pymysql.err.OperationalError as e:
-    print(f"[alpha_db] 连接 MySQL 失败: {e}")
-    print(f"[alpha_db] 请检查 MYSQL_CONFIG 配置并确保 MySQL 服务已启动")
+    logging.error(f"连接 MySQL 失败: {e}")
+    logging.error("请检查 MYSQL_CONFIG 配置并确保 MySQL 服务已启动")

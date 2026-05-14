@@ -11,10 +11,16 @@ import json
 import csv
 import logging
 import threading
+import os
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from login import login
 from alpha_db import save_result as db_save, is_already_tested as db_exists
+
+
+class RateLimitExceeded(Exception):
+    """API 调用次数已用完，需退出程序"""
+    pass
 
 # 并发数: Pre-Consultant 最多 5 个并发，TUTORIAL 账号限制为 1
 MAX_WORKERS = 3
@@ -125,6 +131,9 @@ def simulate(sess_ref, expression, settings, label=""):
             except KeyError:
                 try:
                     resp_json = sim_resp.json()
+                    if 'rate limit' in str(resp_json.get('message', '')).lower():
+                        logging.error(f"  [{label}] API 调用次数已用完: {resp_json}")
+                        raise RateLimitExceeded()
                     if 'credentials' in str(resp_json.get('detail', '')):
                         logging.warning(f"  [{label}] 认证过期，正在刷新 session...")
                         _refresh_session(sess_ref)
@@ -155,6 +164,10 @@ def simulate(sess_ref, expression, settings, label=""):
                 logging.warning(f"  [{label}] 轮询异常: {e}, 5s 后重试")
                 time.sleep(5)
                 continue
+
+            if 'rate limit' in str(data.get('message', '')).lower():
+                logging.error(f"  [{label}] API 调用次数已用完: {data}")
+                raise RateLimitExceeded()
 
             if 'alpha' in data:
                 alpha_id = data['alpha']
@@ -207,6 +220,11 @@ def simulate(sess_ref, expression, settings, label=""):
     try:
         alpha_resp = sess_ref[0].get(f"https://api.worldquantbrain.com/alphas/{alpha_id}")
         alpha_data = alpha_resp.json()
+        if 'rate limit' in str(alpha_data.get('message', '')).lower():
+            logging.error(f"  [{label}] API 调用次数已用完: {alpha_data}")
+            raise RateLimitExceeded()
+    except RateLimitExceeded:
+        raise
     except Exception as e:
         logging.error(f"  [{label}] 获取 alpha 详情失败: {e}")
         return None
@@ -323,6 +341,9 @@ def run_backtest(run_name, alphas, max_workers=MAX_WORKERS, skip_tested=True):
 
                 try:
                     result = future.result()
+                except RateLimitExceeded:
+                    logging.error("API 调用次数已用完，程序退出")
+                    os._exit(0)
                 except Exception as e:
                     logging.error(f"[{label}] 线程异常: {e}")
                     result = None
