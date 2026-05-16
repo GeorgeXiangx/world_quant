@@ -18,7 +18,7 @@ MYSQL_CONFIG = {
     'host':     'localhost',
     'port':     3306,
     'user':     'root',
-    'password': '123456',              # 请填写你的 MySQL 密码
+    'password': 'Root@1234',              # 请填写你的 MySQL 密码
     'database': 'alpha_simulate', # 库名，需提前创建
     'charset':  'utf8mb4',
 }
@@ -162,6 +162,38 @@ def is_already_tested(expression, settings):
         )
     finally:
         conn.close()
+
+
+def batch_is_already_tested(alphas):
+    """批量检查因子是否已回测过（成功完成的）。
+    alphas: list of (label, expression, settings)
+    返回 dict: md5 -> cached_row (None 表示未回测过)
+    一次 MySQL 连接 + 一条 SQL IN 查询，大幅减少连接开销。
+    """
+    if not alphas:
+        return {}
+    # 计算所有 MD5，同时保留 label 映射
+    md5_to_label = {}
+    for label, expr, settings in alphas:
+        md5 = compute_md5(expr, settings)
+        md5_to_label[md5] = label
+    md5_list = list(md5_to_label.keys())
+    # 批量查询
+    conn = _get_connection()
+    try:
+        placeholders = ','.join(['%s'] * len(md5_list))
+        rows = _fetchall(
+            conn,
+            f"SELECT * FROM backtest_results WHERE md5_hash IN ({placeholders}) AND status = 'success'",
+            tuple(md5_list)
+        )
+    finally:
+        conn.close()
+    # 构建 md5 -> row 映射
+    result = {md5: None for md5 in md5_list}
+    for row in rows:
+        result[row['md5_hash']] = row
+    return result
 
 
 def save_result(label, expression, settings, result, run_name=""):

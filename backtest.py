@@ -15,7 +15,7 @@ import os
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from login import login
-from alpha_db import save_result as db_save, is_already_tested as db_exists
+from alpha_db import save_result as db_save, batch_is_already_tested as db_batch_exists, compute_md5
 
 
 class RateLimitExceeded(Exception):
@@ -287,18 +287,23 @@ def run_backtest(run_name, alphas, max_workers=MAX_WORKERS, skip_tested=True):
     logging.info(f"回测任务: {run_name}, 共 {len(alphas)} 个变体, 并发数={max_workers}")
     logging.info(f"{'='*70}")
 
-    # === 去重: 过滤已成功回测的因子 ===
+    # === 去重: 批量过滤已成功回测的因子 ===
     skipped_count = 0
     new_alphas = []
-    for label, expr, settings in alphas:
-        if skip_tested:
-            cached = db_exists(expr, settings)
+    if skip_tested and alphas:
+        logging.info(f"批量查询 {len(alphas)} 个因子的历史回测记录...")
+        cache_map = db_batch_exists(alphas)  # 一次 MySQL 连接查全部
+        for label, expr, settings in alphas:
+            md5 = compute_md5(expr, settings)
+            cached = cache_map.get(md5)
             if cached:
                 logging.info(f"[{label}] 已回测过 (alpha_id={cached.get('alpha_id')}, "
                              f"sharpe={cached.get('sharpe')}), 跳过")
                 skipped_count += 1
                 continue
-        new_alphas.append((label, expr, settings))
+            new_alphas.append((label, expr, settings))
+    else:
+        new_alphas = list(alphas)
 
     if skipped_count > 0:
         logging.info(f"跳过 {skipped_count} 个已测试因子, 剩余 {len(new_alphas)} 个待回测")
